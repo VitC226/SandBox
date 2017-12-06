@@ -1,0 +1,355 @@
+﻿/*
+ * 小车样式+路径动作
+ */
+ #carList{
+ 	position:absolute;
+    width: 1250px;
+    height: 1080px;
+    left: 0;
+    top: 0;
+	z-index: 2;
+ }
+
+.car{ 
+	position: absolute;
+	width: 72px; height: 80px; 
+	background-repeat: no-repeat;
+	motion-rotation:0;
+	animation-iteration-count: infinite !important;
+}
+.car.wait{
+	/*animation-iteration-count: 1 !important;*/
+}
+.car.pause{
+	animation-play-state:paused;
+}
+.red{background-image:url('../img/car_r.png'); }
+.yellow{background-image:url('../img/car_y.png'); }
+.car span{ display: block; color:#fff; text-shadow:0 0 5px #000; font-weight:bold; text-align:center; line-height:25px; font-size:17px; }
+.car.red span{background:url('../img/carid_r.png') 53% 25% no-repeat; background-size:30px 30px; }
+.car.yellow span{background:url('../img/carid_y.png') 53% 25% no-repeat;background-size:30px 30px ;}
+ 
+ /* 小车方向： ↖ ←   ↙    ↓   ↘    →   ↗    ↑  */
+ /* 对应位置： 0 -72 -144 -216 -288 -360 -432 -504 */
+@keyframes move { 100% { motion-offset: 100%;} }
+
+/*0E - 0F*/
+.slice1{
+	motion-path: path("M985.3,342.1l-71.4-62.7");
+	animation: move linear;
+	animation-duration:4s;
+}
+/*0F - 10*/
+.slice2{
+	motion-path: path("M913.9,279.4l-81.2-71.2");
+	animation: move linear;
+	animation-duration:4s;
+}
+
+/*10 - 3E*/
+.slice3{
+	background-position-x: -144px;
+	motion-path: path("M832.7,208.2l-17.3-15.2c-31.3-27.6-82-27.6-113.1,0l-51.5,45.5");
+	animation: move linear,change1 steps(1,end);
+	animation-duration:4s;
+}
+@keyframes change1{
+	0% { background-position-x: 0; }
+	24% { background-position-x: -72px; }
+	49% { background-position-x: -144px; }
+}
+
+/*3E - 41/45*/
+.slice4{
+	background-position-x: -144px;
+	motion-path: path("M650.7,238.5l-68.5,60.5");
+	animation: move linear;
+	animation-duration:2s;
+}
+
+/*41/45 - 11*/
+.slice5{
+	background-position-x: -144px;
+	motion-path: path("M582.3,298.9L534,341.6");
+	animation: move linear;
+	animation-duration:2s;
+}
+.slice500{
+	background-position-x: -144px;
+	motion-path: path("M582.3,298.9L534,341.6");
+	animation: move linear;
+	animation-duration:5s;
+}
+
+/*11 - *01*/
+.slice6{
+	background-position-x: -144px;
+	motion-path: path("M534,341.6L346.9,506.9");
+	animation: move linear;
+	animation-duration:4s;
+}
+
+/**01 - 12*/
+.slice7{
+	background-position-x: -144px;
+	motion-path: path("M346.9,506.9l-64.2,56.7c-15.7,14-39.5,4.4-47.7,2.3  c-35.5-9.1-73.3-2.6-102.1,16.7");
+	animation: move linear,change7 steps(1,end);
+	animation-duration:6s;
+}
+@keyframes change7{
+	34% { background-position-x: -72px; } 
+	68% { background-position-x: -144px; } 
+
+}
+/*12 - 01*/
+.slice8{
+	background-position-x: -144px;
+	motion-path: path("M132.9,582.6c-4.2,2.8-8.2,5.9-12,9.3c-45,40-44.8,105,0.7,145.1  c22,19.3,51.5,29.9,82.9,29.6c31.5-0.3,60.6-11.3,82.1-31c2.4-2.2,4.6-4.4,6.7-6.7");
+	animation: move linear,change8 steps(1,end);
+	animation-duration:8s;
+}
+@keyframes change8{
+	12.6% { background-position-x: -216px; }
+	34% { background-position-x: -288px; }
+	61% { background-position-x: -360px; }
+	85% { background-position-x: -432px; }
+}
+
+
+/*01 - 02*/
+.slice9{
+	background-position-x: -432px;
+	motion-path: path("M293.4,728.8c10.4-11.4,17.9-24.6,22-38.8c4.8-16.6,4.8-34.1-0.2-51.2  c-3-10.3-3.4-33,8.9-43.9l66-58");
+	animation: move linear,change9 steps(1,end);
+	animation-duration:4s;
+}
+@keyframes change9{
+	12% { background-position-x: -504px; }
+	56% { background-position-x: -432px; }
+}
+
+/*02 - 2D*/
+.slice10{
+	background-position-x: -432px;
+	motion-path: path("M390,536.9l185.1-162.7");
+	animation: move linear;
+	animation-duration:3s;
+}
+
+/*2D - 2F*/
+.slice11{
+	background-position-x: -432px;
+	motion-path: path("M575.1,374.3l76.1-66.9");
+	animation: move linear;
+	animation-duration:3s;
+}
+
+/*2F - 34/38*/
+.slice12{
+	background-position-x: -432px;
+	motion-path: path("M651.2,307.4l72.2-63.4");
+	animation: move linear;
+	animation-duration:4s;
+}
+
+/*34/38 - 03*/
+.slice13{
+	background-position-x: -432px;
+	motion-path: path("M723.4,244l4.9-4.4c18.4-16.4,48.5-16.4,67.1,0l14,12.3");
+	animation: move linear,change13 steps(1,end);
+	animation-duration:5.5s;
+}
+.slice1300{
+	background-position-x: -432px;
+	motion-path: path("M723.4,244l4.9-4.4c18.4-16.4,48.5-16.4,67.1,0l14,12.3");
+	animation: move linear,change13 steps(1,end);
+	animation-duration:8s;
+}
+@keyframes change13{
+	25% { background-position-x: -360px; }
+	61% { background-position-x: -288px; }
+}
+/*03 - 04*/
+.slice14{
+	background-position-x: -288px;
+	motion-path: path("M809.3,251.9l68.7,60.7");
+	animation: move linear;
+	animation-duration:3.5s;
+}
+
+/*04 - 05*/
+.slice15{
+	background-position-x: -288px;
+	motion-path: path("M878,312.6l67.5,59.6");
+	animation: move linear;
+	animation-duration:1.7s;
+}
+
+/*05 - 06*/
+.slice16{
+	background-position-x: -288px;
+	motion-path: path("M945.5,372.3L1038,454");
+	animation: move linear;
+	animation-duration:3s;
+}
+
+/*06 - 07*/
+.slice17{
+	background-position-x: -288px;
+	motion-path: path("M1038,454l84.8,74.9");
+	animation: move linear;
+	animation-duration:4.7s;
+}
+
+/*07 - 08*/
+.slice18{
+	background-position-x: -288px;
+	motion-path: path("M1122.9,528.9l6.3,5.6c17.9,15.8,18,41.4,0.2,57.2L1110,608");
+	animation: move linear,change18 steps(1,end);
+	animation-duration:4.6s;
+}
+@keyframes change18{
+	0% { background-position-x: -288px; }
+	20% { background-position-x: -216px; }
+	45% { background-position-x: -144px; }
+}
+/*08 - 09*/
+.slice19{
+	background-position-x: -144px;
+	motion-path: path("M1110,608l-100.7,85.2");
+	animation: move linear;
+	animation-duration:2.5s;
+}
+
+/*09 - 51/53*/
+.slice20{
+	background-position-x: -144px;
+	motion-path: path("M1009.4,693.2l-82.3,69.6");
+	animation: move linear;
+	animation-duration:2.5s;
+}
+
+/*51/53 - 47*/
+.slice21{
+	background-position-x: -144px;
+	motion-path: path("M927.1,762.9c-18.7,16.6-46.2,15-65-1.6l-7.4-6.7");
+	animation: move linear,change21 steps(1,end);
+	animation-duration:2.5s;
+}
+.slice2100{
+	background-position-x: -144px;
+	motion-path: path("M927.1,762.9c-18.7,16.6-46.2,15-65-1.6l-7.4-6.7");
+	animation: move linear,change21 steps(1,end);
+	animation-duration:5s;
+}
+@keyframes change21{
+	0% { background-position-x: -144px; }
+	20% { background-position-x: -72px; }
+	50% { background-position-x: 0; }
+}
+
+/*47 - 48*/
+.slice22{
+	background-position-x: 0;
+	motion-path: path("M854.6,754.6l-55.9-50.3c-2.7-2.4-5.6-4.4-8.7-6.1");
+	animation: move linear;
+	animation-duration:2.1s;
+}
+
+/*48 - 5C*/
+.slice23{
+	background-position-x: 0;
+	motion-path: path("M790, 698.1c-22.5-12.7-54.7-9.4-74, 7.7l-70.6, 62.6c-2.7, 2.4-5.1, 5-7.1, 7.7");
+	animation: move linear,change23 steps(1,end);
+	animation-duration:1.5s;
+}
+@keyframes change23 {
+	38% { background-position-x: -144px; }
+}
+
+/*5C - 49*/
+.slice24{
+	background-position-x: -144px;
+	motion-path: path("M638.3, 776.2c-14.4, 19.4-12, 45.8, 7.4, 62.9l178.5, 157.4c22.1, 19.5, 57.9, 19.5, 79.8, 0l44.2-36");
+	animation: move linear,change24 steps(1,end);
+	animation-duration:11.5s;
+}
+@keyframes change24 {
+	2% { background-position-x: -216px; }
+	10% { background-position-x: -288px; }
+	73% { background-position-x: -360px; }
+	83% { background-position-x: -432px; }
+}
+
+/*49 - 4A*/
+.slice25{
+	background-position-x: -432px;
+	motion-path: path("M948.2,960.6l33.2-27c18.7-16.1,20.6-35.2,9.5-54.4");
+	animation: move linear,change25 steps(1,end);
+	animation-duration:1.8s;
+}
+@keyframes change25 {
+	58% { background-position-x: -504px; }
+}
+
+/*4A - 4C*/
+.slice26{
+	background-position-x: 0;
+	motion-path: path("M990.8, 879.2c-3.3-5.8-7.9-11.6-13.5-17.3c-24.2-24.7-40.7-41-10.7-65.6l49.2-42.2");
+	animation: move linear,change26 steps(1,end);
+	animation-duration:1.8s;
+}
+@keyframes change26 {
+	28% { background-position-x: -504px; }
+	45% { background-position-x: -432px; }
+}
+
+/*4C - 4B*/
+.slice27{
+	background-position-x: -432px;
+	motion-path: path("M1015.9,754.2l60.4-51.8");
+	animation: move linear;
+	animation-duration:1s;
+}
+
+/*4B - 0B*/
+.slice28{
+	background-position-x: -432px;
+	motion-path: path("M1076.3,702.4l86.9-74.4");
+	animation: move linear;
+	animation-duration:6s;
+}
+
+/*0B - 0C*/
+.slice29{
+	background-position-x: -432px;
+	motion-path: path("M1163.1,628l17.6-15.1c31.3-27.8,26.8-75.7-4.7-103.5l-22.6-19.9");
+	animation: move linear, change29 steps(1,end);
+	animation-duration:5.5s;
+}
+.slice2900{
+	background-position-x: -432px;
+	motion-path: path("M1163.1,628l17.6-15.1c31.3-27.8,26.8-75.7-4.7-103.5l-22.6-19.9");
+	animation: move linear, change29 steps(1,end);
+	animation-duration:7.5s;
+}
+@keyframes change29 {
+	29% { background-position-x: -504px; }
+	60% { background-position-x: 0; }
+}
+
+/*0C - 0D*/
+.slice30{
+	background-position-x: 0;
+	motion-path: path("M1153.4,489.6l-75.3-66.1");
+	animation: move linear;
+	animation-duration:4s;
+}
+/*0D - 0E*/
+.slice31{
+	background-position-x: 0;
+	motion-path: path("M1078,423.5l-92.8-81.4");
+	animation: move linear;
+	animation-duration:1.8s;
+}
+

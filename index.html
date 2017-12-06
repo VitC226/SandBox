@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>展厅沙盘控制系统</title>
+	<link rel="stylesheet" href="css/car.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script data-main="js/app.js" src="js/libs/require.js"></script>
+</head>
+
+<body>
+	<div id="main">
+		<div id="board_car">
+			<div id="sceneList">
+				<div id="station1">
+					<div class="rail railRight"></div>
+					<div id="lane1" class="lane">
+						<span>收费站1</span>
+						<img src="img/allow.gif" />
+					</div>
+					<div id="info1" class="info">
+						<div id="title1" class="title"></div>
+						<ul>
+							<li>
+								<label>车型</label>
+								<span class="type"></span>
+							</li>
+							<li>
+								<label>入口</label>
+								<span class="in"></span>
+							</li>
+							<li>
+								<label>金额</label>
+								<span class="money"></span>
+							</li>
+							<li>
+								<label>余额</label>
+								<span class="blance"></span>
+							</li>
+							<li>
+								<label>时间</label>
+								<span class="datetime"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="station2">
+					<div class="rail railRight"></div>
+					<div id="lane2" class="lane">
+						<div class="panel">
+							<span>收费站2</span>
+							<p>ETC车道&nbsp;广州华工信息软件有限公司</p>
+						</div>
+						<img src="img/allow.gif" />
+					</div>
+					<div id="info2" class="info">
+						<div id="title2" class="title"></div>
+						<ul>
+							<li>
+								<label>车型</label>
+								<span class="type"></span>
+							</li>
+							<li>
+								<label>入口</label>
+								<span class="in"></span>
+							</li>
+							<li>
+								<label>金额</label>
+								<span class="money"></span>
+							</li>
+							<li>
+								<label>余额</label>
+								<span class="blance"></span>
+							</li>
+							<li>
+								<label>时间</label>
+								<span class="datetime"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="point" class="lane">
+					<span>标识点</span>
+					<img src="img/detect.gif" />
+				</div>
+				<div id="park">
+					<div id="rail1" class="railLeft"></div>
+					<div id="rail2" class="railRight"></div>
+					<div id="parkinfo" class="info">
+						<div id="parktitle" class="title">停车场</div>
+						<ul>
+							<li>
+								<label>车型</label>
+								<span class="type"></span>
+							</li>
+							<li>
+								<label>金额</label>
+								<span class="price"></span>
+							</li>
+							<li>
+								<label>驶入时间</label>
+								<span class="in"></span>
+							</li>
+							<li>
+								<label>驻离时间</label>
+								<span class="out"></span>
+							</li>
+							<li>
+								<label>停车时间</label>
+								<span class="park"></span>
+							</li>
+							<li>
+								<label class="bold">剩余车位数</label>
+								<span class="bold"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="carList"></div>
+			<div class="je-box">
+				<div >
+					<img src="img/layer_bot.png" class="j-img"></div>
+				<div >
+					<img src="img/layer_top.png" class="j-img" style="left:0;top:0;z-index:9;"></div>
+			</div>
+		</div>
+		<div id="board_chart">
+			<ul id="chart_foot">
+				<li class="chart1"></li>
+				<li class="chart2"></li>
+				<li class="chart3"></li>
+				<li class="chart4"></li>
+				<li class="chart5"></li>
+				<li class="chart6"></li>
+				<li class="chart7"></li>
+			</ul>
+			<div id="chart"></div>
+		</div>
+		<div id="board_table">
+			<div id="list">
+				<div id="list_head">
+					<label class="i1">流水号</label>
+					<label class="i2">清分目标日</label>
+					<label class="i3">车牌</label>
+					<label class="i4">出口时间</label>
+					<label class="i5">入口站名</label>
+					<label class="i6">出口站名</label>
+					<label class="i7">ETC金额</label>
+					<label class="i8">流水状态</label>
+					<label class="i9">清分日期</label>
+				</div>
+				<div id="list_body"></div>
+				<div id="list_footer">
+					已接收流水总数：
+					<span id="receive">0</span>
+					条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已正常清分流水数：
+					<span id="success">0</span>
+					条
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

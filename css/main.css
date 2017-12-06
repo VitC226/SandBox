@@ -1,0 +1,332 @@
+﻿* {
+    margin: 0;
+    padding: 0
+}
+ul {
+    list-style: none;
+}
+#main {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: url("../img/bg.jpg") no-repeat;
+}
+#board_chart {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 634px;
+    height: 385px;
+}
+#board_table {
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    width: 606px;
+    height: 443px;
+}
+#chart {
+    width: 634px;
+    height: 385px;
+}
+#board_table #list {
+    background-color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+#board_table #list_body {
+    height: 385px;
+    overflow-y: scroll;
+    width: 621px;
+    padding-bottom: 30px;
+}
+#board_table #list_footer {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align: center;
+    background: no-repeat #108FC1;
+    color:#fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#list_head {
+    line-height: 44px;
+    border-radius: 5px 5px 0 0;
+    height: 44px;
+    background: url("../img/table_head.png") repeat-x;
+    border-bottom: 2px solid #032744;
+    color: #0e3f54;
+    font-weight: bold;
+    font-size: 12px;
+}
+#list_head label, #list_body span {
+    float: left;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    vertical-align: middle;
+    font-size: 12px;
+}
+#list_body {
+    max-height: 450px;
+    width: 623px;
+    overflow-y: auto;
+}
+#list_body .item {
+    border-bottom: 1px solid #cecece;
+    padding: 5px 0;
+    overflow: auto;
+}
+.i1 {
+    width: 104px;
+    padding: 0;
+}
+.i2 {
+    width: 65px;
+    padding: 0 4px;
+}
+.i3 {
+    width: 48px;
+    padding: 0 4px;
+}
+.i4 {
+    width: 60px;
+    padding: 0 4px;
+}
+.i5 {
+    width: 52px;
+    padding: 0 4px;
+}
+.i6 {
+    width: 52px;
+    padding: 0 4px;
+}
+.i7 {
+    width: 47px;
+    padding: 0 4px;
+}
+.i8 {
+    width: 52px;
+    padding: 0 4px;
+}
+.i9 {
+    width: 60px;
+    padding: 0 4px;
+}
+.je-box {
+    position: absolute;
+    width: 1834px;
+    height: 1063px;
+}
+.j-img {
+    position: absolute;
+}
+#sceneList > div {
+    position: absolute;
+    z-index: 20;
+}
+.info {
+    display: none;
+}
+.lane {
+    opacity: 0;
+}
+.lane.show {
+    animation: show 4.5s linear alternate;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#station1 {
+    top: 23px;
+    left: 307px;
+}
+#station1 .info {
+    width: 288px;
+    height: 209px;
+    background: url(../img/window_big_blue.png) center bottom no-repeat;
+    background-size: 100% 91%;
+}
+.info .title {
+    display: block;
+    width: 135px;
+    height: 44px;
+    background: url(../img/rect_blue.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #1f4d7e;
+    line-height: 44px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 0px #FFF;
+}
+#station2 {
+    top: 689px;
+    left: 1002px;
+}
+#station2 .info {
+    width: 268px;
+    height: 209px;
+    background: url(../img/window_blueB.png) center bottom no-repeat;
+    background-size: 100% 100%;
+}
+.info ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 42px;
+    color: #132b75;
+    font-size: 14px;
+    line-height: 26px;
+}
+.info label {
+    width: 27%;
+    display: block;
+    text-align: left;
+}
+.info label.bold {
+    width: 64%;
+}
+.info span {
+    width: 73%;
+    display: block;
+    text-align: right;
+}
+.info span.bold {
+    width: 36%;
+}
+#park {
+    top: 660px;
+    left: 733px;
+    z-index: 999;
+    width: 300px;
+    height: 300px;
+}
+#park .info {
+    width: 293px;
+    height: 248px;
+    top:-189px;
+    left:-90px;
+    background: url(../img/window_blue.png) center bottom no-repeat;
+    background-size: 100% 95%;
+    position: relative;
+    z-index: 9;
+}
+.bold {
+    font-weight: bolder;
+}
+#lane1 {
+    left: 260px;
+    top: 35px;
+}
+#point {
+    left: 862px;
+    top: 99px;
+    animation-duration: 2s;
+}
+#lane1 span, #point span {
+    top: 100px;
+}
+#lane2 {
+    left: -28px;
+    top: -237px;
+}
+.lane {
+    position: absolute;
+    width: 128px;
+}
+.lane img {
+    width: 100%;
+}
+.lane span {
+    font-size: 12px;
+    width: 100%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    line-height: 22px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.panel {
+    width: 165%;
+    position: absolute;
+    left: -32.5%;
+    top: 93px;
+    padding: 25px 0 5px;
+    text-align: center;
+    font-size: 12px;
+    background: url(../img/rect_yellow.png) no-repeat;
+    background-size: 100% 100%;
+}
+.updateList {
+    animation: heightChange 1s,colorChange 2s 6s;
+    overflow-y: hidden !important; 
+    background: #FFFFAD;
+    animation-fill-mode : forwards;
+}
+@keyframes heightChange {
+    0% { height: 0;}
+    100% { height: 29px;}
+}
+.updateList span{
+    opacity: 0;
+    animation: opacityChange 1s .5s;
+    animation-fill-mode : forwards;
+}
+@keyframes opacityChange {
+    0% { opacity: 0}
+    100% { opacity: 1; }
+}
+@keyframes colorChange {
+    0% { background: #FFFFAD;}
+    100% { background: #fff; }
+}
+
+#rail1,#rail2,.rail{ position: absolute; width: 41px; height: 83px; }
+.railLeft{ background: url(../img/icon_left_luogan.png) no-repeat; }
+.railRight{ background: url(../img/icon_luogan.png) no-repeat; }
+#rail1{ top:0px; left:88px; }
+#rail2{ bottom:26px; right:50px; }
+#station1 .rail{ left: 268px; top: 183px; }
+#station2 .rail{ left: -73px; top: -25px; }
+.railLeft.open{
+    animation: railOpenLeft;
+    animation-fill-mode : forwards;
+}
+@keyframes railOpenLeft {
+    0% { background: url(../img/icon_left_luogan.png) no-repeat; }
+    100% { background: url(../img/icon_left_qigan.png) no-repeat; }
+}
+
+.railRight.open{
+    animation: railOpenRight;
+    animation-fill-mode : forwards;
+}
+@keyframes railOpenRight {
+    0% { background: url(../img/icon_luogan.png) no-repeat; }
+    100% { background: url(../img/icon_qigan.png) no-repeat; }
+}
